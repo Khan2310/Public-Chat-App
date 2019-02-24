@@ -1,7 +1,6 @@
 import React, { Component } from "react";
-import "./App.css";
 import "./styleChatApp.css";
-import Comp1 from "./messageContainer.js";
+import MessageContainer from "./messageContainer.js";
 
 class App extends Component {
   constructor(props) {
@@ -12,7 +11,8 @@ class App extends Component {
     this.state = {
       inputArray: [],
       inputText: "",
-      currenTime: ""
+      currenTime: "",
+      isLogin: false
     };
   }
 
@@ -29,6 +29,7 @@ class App extends Component {
 
   async eventHandler() {
     let person = {
+      name: "khan",
       text: this.state.inputText,
       dateTime: this.state.currenTime
     };
@@ -56,17 +57,21 @@ class App extends Component {
 
   render() {
     const showMessage = this.state.inputArray.map((item, idx) => {
-      return <Comp1 inputValueText={item} idProps={idx} key={idx} />;
+      return <MessageContainer inputValueText={item} idProps={idx} key={idx} />;
     });
     return (
       <div className="chatbox-head-container">
         <div className="chat-container">
           <div className="menu-content">
-            <h4>Public Chat</h4>
+            <div className="menu-content-title">
+              <h4>
+                <span className="red-dot" /> Public Chat
+              </h4>
+            </div>
           </div>
           <div className="message-container">{showMessage}</div>
           <div className="input-area">
-            <div className="input-box">
+            <div className="input-box-chat">
               <input
                 ref="inputBox"
                 className="input-text-area"
@@ -76,7 +81,7 @@ class App extends Component {
               />
             </div>
             <div className="send-button-box">
-              <button className="style-button" onClick={this.eventHandler}>
+              <button className="style-button-chat" onClick={this.eventHandler}>
                 Send
               </button>
             </div>
