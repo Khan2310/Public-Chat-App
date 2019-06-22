@@ -5,12 +5,25 @@
   "dependencies": {
     "react": "^16.5.2",
     "react-dom": "^16.5.2",
-    "react-scripts": "1.1.5"
+    "react-scripts": "1.1.5",
+    "socket.io-client": "^2.2.0"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
-  }
+  },
+  "description": "This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Khan2310/Chat-App.git"
+  },
+  "author": "khan",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Khan2310/Chat-App/issues"
+  },
+  "homepage": "https://github.com/Khan2310/Chat-App#readme"
 }

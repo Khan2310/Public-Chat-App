@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import io from "socket.io-client";
 import "./styleChatApp.css";
 import MessageContainer from "./messageContainer.js";
 
@@ -14,6 +15,12 @@ class App extends Component {
       currenTime: "",
       isLogin: false
     };
+
+    this.socket = io("https://public-chat-app123.herokuapp.com/");
+    this.socket.on("chat-message", data => {
+      this.setState({ inputArray: data });
+      console.log(data, "in socket data");
+    });
   }
 
   inputHandler(event) {
@@ -37,6 +44,7 @@ class App extends Component {
       await this.setState({
         inputArray: [...this.state.inputArray, person]
       });
+      this.socket.emit("chat-message", this.state.inputArray);
       this.clearInputField();
       let grabbableId = this.state.inputArray.length - 1;
       let grabbedElement = document.getElementById(grabbableId);
