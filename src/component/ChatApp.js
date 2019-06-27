@@ -26,7 +26,7 @@ export default class ChatApp extends Component {
     this.setState({ inputText: event.target.value });
     this.setState({ currenTime: new Date().toLocaleTimeString() });
 
-    if (event.keyCode == 13 && this.state.inputText !== "") {
+    if (event.keyCode === 13 && this.state.inputText !== "") {
       // this.setState({ inputText: event.target.value });
       this.eventHandler();
       this.clearInputField();
@@ -35,7 +35,7 @@ export default class ChatApp extends Component {
 
   async eventHandler() {
     let person = {
-      name: "khan",
+      name: this.props.userName,
       text: this.state.inputText,
       dateTime: this.state.currenTime
     };
