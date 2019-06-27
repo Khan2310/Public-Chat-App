@@ -1,3 +1,72 @@
+.person-name-compo {
+  padding-top: 5em;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.persone-name-background {
+  background-color: #6d214f;
+  /* border: 3px solid red; */
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  padding-bottom: 2em;
+  width: 50%;
+}
+
+.persone-name-input-area {
+  display: flex;
+  flex: 1;
+  align-items: center;
+  padding: 3em;
+}
+.person-name-title {
+  margin: 0;
+  /* padding: 0.5em; */
+  /* background-color: blue; */
+  /* border: 0.1em solid white; */
+  font-family: "Comfortaa", cursive;
+  text-align: center;
+  font-size: 1.2em;
+  color: white;
+  padding-right: 1.5em;
+}
+
+.person-name-input-text-area {
+  border: 0.09em solid white;
+  border-radius: 5px;
+  outline: none;
+  font-size: 1em;
+  flex: 2;
+  font-family: "Comfortaa", cursive;
+  background-color: #6d214f;
+  color: white;
+  margin: 0;
+  padding: 0.5em;
+  width: 100%;
+}
+
+.person-name-button {
+  border: none;
+  font-weight: bold;
+  font-family: "Comfortaa", cursive;
+  font-size: 20px;
+  cursor: pointer;
+  border-radius: 10px;
+  background-color: #9c3d76;
+  color: white;
+  /* margin-left: 40%; */
+  width: 20%;
+  height: 46px;
+}
+
+.person-name-button:hover {
+  background-color: #b53471;
+}
+
 .chatbox-head-container {
   display: flex;
   margin: auto;
@@ -183,7 +252,7 @@
   font-size: 20px;
   cursor: pointer;
   border-radius: 10px;
-  background-color: #833471;
+  background-color: #9c3d76;
   color: white;
   width: 100%;
   height: 46px;
