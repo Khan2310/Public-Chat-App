@@ -18,7 +18,7 @@ export default class ChatApp extends Component {
     this.socket = io("https://public-chat-app123.herokuapp.com/");
     this.socket.on("chat-message", data => {
       this.setState({ inputArray: data });
-      console.log(data, "in socket data");
+      // console.log(data, "in socket data");
     });
   }
 

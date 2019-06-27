@@ -7,7 +7,7 @@ export default class PersonName extends Component {
 
   personNameEventHandler() {
     if (this.state.personName !== "") {
-      console.log(this.state.personName, " --> from Child");
+      //console.log(this.state.personName, " --> from Child");
       this.props.placeUserName(this.state.personName, true);
     }
   }

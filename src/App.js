@@ -10,10 +10,10 @@ class App extends Component {
   };
 
   setUserName = async (userName, isUserName) => {
-    console.log(userName, isUserName, " --> from Parent ");
+    // console.log(userName, isUserName, " --> from Parent ");
     await this.setState({ userName });
     await this.setState({ isUserName });
-    console.log(this.state.userName, " --> from parent state");
+    // console.log(this.state.userName, " --> from parent state");
   };
 
   render() {
