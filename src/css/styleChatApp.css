@@ -187,8 +187,7 @@
 }
 
 .message-text-holder:hover {
-  color: black;
-  box-shadow: 10px 5px 1px 0px;
+  box-shadow: 10px 5px 1px 0px rgba(17, 15, 15, 0.829);
 }
 
 .message-time-holder {
@@ -207,7 +206,7 @@
   border-radius: 15px;
   line-height: 15px;
   padding: 5px 15px;
-  color: black;
+  color:rgba(128, 17, 60, 0.753);
   font-family: "Roboto Mono", monospace;
 }
 
@@ -260,4 +259,68 @@
 
 .style-button-chat:hover {
   background-color: #b53471;
+}
+
+@media screen and (max-width: 1000px) {
+  .chatbox-head-container {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .chatbox-head-container {
+    width: 100%;
+  }
+
+  .chat-container {
+    margin-top: 0;
+  }
+
+  .persone-name-background {
+    width: 100%;
+  }
+
+}
+
+@media screen and (max-width: 500px) {
+  
+  .persone-name-input-area {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .person-name-title {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    padding-bottom: 1.5em;
+    padding-right: 0em;
+  }
+
+  .person-name-button {
+    width: 30%;
+  }
+
+  .chat-container {
+    margin-top: 0;
+  }
+
+  .message-container {
+    height: calc( 100vh - 105px );
+  }
+
+  .message-text-holder {
+    line-height: 40px;
+    font-size: 1.3em;
+    padding: 5px 10px;
+  }
+
+  /* .message-time-holder {
+    display: flex;
+    flex-direction: column;
+    margin: auto 10px;
+    width: auto;
+    justify-content: flex-end;
+  } */
+
 }
